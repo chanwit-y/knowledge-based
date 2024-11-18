@@ -1,5 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html {
-  font-family: Arial, Helvetica;
+.link {
+  text-decoration: none !important;
 }
 
+.VPNavBarTitle.has-sidebar .title {
+  border: 0;
+}
+
+.dark #VPSidebarNav > .group:nth-child(-n + 8):not(:first-child) > .VPSidebarItem > .item > .text::before {
+  filter: invert(1);
+}
+
+#VPSidebarNav > .group > .VPSidebarItem > .item > .text::before {
+  @apply mr-2 block w-4 h-4 bg-cover;
+  content: "";
+}
+
+#VPSidebarNav > .group:nth-child(2) > .VPSidebarItem > .item > .text::before {
+  background-image: url('../../public/assets/coffee.svg');
+}
+
+#VPSidebarNav > .group {
+
+  & > .VPSidebarItem {
+
+    & > .item > .text {
+      @apply flex items-center text-base py-1.5
+    }
+
+  }
+}
