@@ -3,7 +3,7 @@ import { transformerTwoslash } from "@shikijs/vitepress-twoslash";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "<Beer />",
+  title: "<Knowledge />",
   description: "A VitePress Site",
   ignoreDeadLinks: true,
   lastUpdated: true,
@@ -21,11 +21,11 @@ export default defineConfig({
     logo: "/assets/logo.png",
     sidebar: [
       {
-        text: "Getting Started",
+        text: "React",
         items: [
           {
             text: "At Glance",
-            link: "/at-glance",
+            link: "/api-examples.html",
           },
           {
             text: "Quick Start",

@@ -10,26 +10,56 @@
   border: 0;
 }
 
-.dark #VPSidebarNav > .group:nth-child(-n + 8):not(:first-child) > .VPSidebarItem > .item > .text::before {
+.dark
+  #VPSidebarNav
+  > .group:nth-child(-n + 8):not(:first-child):not(:nth-child(2))
+  > .VPSidebarItem
+  > .item
+  > .text::before {
+    /* @apply filter dark:text-white */
   filter: invert(1);
 }
 
 #VPSidebarNav > .group > .VPSidebarItem > .item > .text::before {
-  @apply mr-2 block w-4 h-4 bg-cover;
+  @apply mr-2 block  h-4 bg-cover ;
+  width: 1.1rem;
   content: "";
 }
 
 #VPSidebarNav > .group:nth-child(2) > .VPSidebarItem > .item > .text::before {
-  background-image: url('../../public/assets/coffee.svg');
+  background-image: url("../../public/assets/react.svg");
 }
 
 #VPSidebarNav > .group {
-
   & > .VPSidebarItem {
 
-    & > .item > .text {
-      @apply flex items-center text-base py-1.5
+    & > .items > .VPSidebarItem {
+      /* &:hover::before {
+        @apply border-l-4;
+      } */
+      &:hover, &.is-active.has-active {
+        /* background-color: #ededfd */
+        @apply bg-gray-800 rounded-tr-md rounded-br-md border-l-4;
+        padding-left: 1.06rem;
+      }
     }
 
+    & > .item > .text {
+      @apply flex items-center text-base py-1.5;
+    }
+
+    & > .items > .VPSidebarItem {
+      @apply border-l dark:border-gray-500 border-gray-600 ml-2 pl-5;
+    }
+    & > .items > .VPSidebarItem > .item > .indicator {
+      /* @apply border-l dark:border-gray-500 border-gray-600 ml-2 pl-4; */
+    }
   }
+}
+
+.VPDocAsideOutline > .content {
+  /* @apply dark:border-gray-500 border-gray-600 */
+}
+
+#VPContent > .VPDoc > .container > .aside {
 }
