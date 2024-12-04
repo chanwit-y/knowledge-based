@@ -25,7 +25,7 @@ const { site, frontmatter } = useData()
           <div class="jumbo absolute opacity-60 -animated" />
           <!-- </div> -->
         </div>
-        <button @click="onClick">Click</button>
+        <button>Click</button>
         <!-- <div id="box" class="absolute top-10 left-10 w-5 h-5 bg-slate-50" /> -->
         <!-- <Content /> -->
       </template>

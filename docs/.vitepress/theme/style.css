@@ -27,7 +27,7 @@
 }
 
 #VPSidebarNav > .group:nth-child(2) > .VPSidebarItem > .item > .text::before {
-  background-image: url("../../public/assets/react.svg");
+  background-image: url("../../public/assets/NotoV1Books.svg");
 }
 
 #VPSidebarNav > .group {
@@ -39,6 +39,7 @@
       } */
       &:hover, &.is-active.has-active {
         /* background-color: #ededfd */
+        /* @apply bg-gray-800 rounded-tr-md rounded-br-md border-l-4; */
         @apply bg-gray-800 rounded-tr-md rounded-br-md border-l-4;
         padding-left: 1.06rem;
       }

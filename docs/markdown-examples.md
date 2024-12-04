@@ -80,6 +80,56 @@ This is a dangerous warning.
 This is a details block.
 :::
 
-## More
+<!-- ## More
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown). -->
+
+```ts twoslash
+// @filename: a.ts
+export const helloWorld = "Hi"
+ 
+// @filename: b.ts
+ 
+// ---cut---
+import { helloWorld } from "./a"
+console.log(helloWorld)
+```
+
+```ts twoslash
+// @noErrors
+import { TQuery } from './.vitepress/@types/query-builder.ts'
+type TZ = {
+  name: string;
+}
+ 
+// ---cut---
+const z: TZ;
+const view_tcm_percent_ome: TQuery = {
+      if: {
+        leftTerm: {
+          leftTerm: 1,
+          operator: "=",
+          rightTerm: 1,
+        },
+        operator: "and",
+        rightTerm: {
+          leftTerm: 1,
+          operator: "=",
+          rightTerm: 1,
+        },
+      },
+      then: "Yes",
+      else: "No",
+      as: "result",
+    }
+```
+
+<!-- ```ts twoslash 
+import { relations } from 'drizzle-orm'
+``` -->
+
+<script setup>
+  import Move from "./.vitepress/components/Move.vue";
+</script>
+
+<Move />
