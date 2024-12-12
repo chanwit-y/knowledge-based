@@ -23,14 +23,52 @@ export default defineConfig({
     sidebar: [
       {
         text: "Library",
+        collapsed: true,
         items: [
           {
             text: "Query Builder",
-            link: "/markdown-examples.html",
+            items: [
+              {
+                text: "Introduction",
+                link: "/library/query-builder/introduction.html",
+              },
+              {
+                text: "Type",
+                link: "/library/query-builder/types.html",
+              },
+            ],
           },
           {
             text: "React useAPI",
             link: "/api-examples.html",
+          },
+        ],
+      },
+      {
+        text: "Azure",
+        collapsed: true,
+        items: [
+          {
+            text: "Functions App",
+            link: "/azure-functions.html",
+          },
+          {
+            text: "Logic App",
+            link: "/azure-storage.html",
+          },
+        ],
+      },
+      {
+        text: "SharePoint",
+        collapsed: true,
+        items: [
+          {
+            text: "SPFx",
+            link: "/spfx.html",
+          },
+          {
+            text: "PnPjs",
+            link: "/pnpjs.html",
           },
         ],
       },
@@ -260,4 +298,3 @@ export default defineConfig({
     ],
   },
 });
-

@@ -6,11 +6,11 @@ import { ref, shallowRef } from 'vue'
 const highlighter = ref<Highlighter>()
 
 const loadingPromise = shallowRef<Promise<void> | undefined>(getHighlighter({
-	themes: [ 'vitesse-dark'],
-	langs: ['javascript', 'typescript', 'json'],
+  themes: ['vitesse-dark'],
+  langs: ['javascript', 'typescript', 'json'],
 }).then((h) => {
-	highlighter.value = h
-	loadingPromise.value = undefined
+  highlighter.value = h
+  loadingPromise.value = undefined
 }))
 const begin = `{
       if: {
@@ -34,7 +34,7 @@ const code = ref(begin);
 
 
 function animate() {
-	code.value = `{
+  code.value = `{
       result: {
         $cond: {
           if: {
@@ -53,15 +53,15 @@ function reset() {
 </script>
 
 <template>
-	<div v-if="highlighter" class="" >
-		<ShikiMagicMove class="p-2 rounded-md" lang="json" theme="vitesse-dark" :highlighter="highlighter" :code="code"
-			:options="{ duration: 800, stagger: 0.3 }" />
-		<button @click="animate">
-			Animate
-		</button>
-    <button @click="reset">
-      Reset
-    </button>
-	</div>
+  <div v-if="highlighter" class="">
+
+    <div class="flex justify-end">
+      <button class="btn rounded-none" @click="reset">JSON</button>
+      <button class="btn rounded-none" @click="animate">Aggregate</button>
+    </div>
+
+    <ShikiMagicMove class="p-2" lang="json" theme="vitesse-dark" :highlighter="highlighter" :code="code"
+      :options="{ duration: 800, stagger: 0.3 }" />
+  </div>
 
 </template>
